@@ -1,3 +1,3 @@
-ofxBlackmagic
+ofxBlackMagic2
 ofxGui
 ofxSyphon

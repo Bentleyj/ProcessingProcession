@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "ofxBlackMagic.h"
 
 class ControlApp : public ofBaseApp{
 
@@ -16,18 +17,28 @@ class ControlApp : public ofBaseApp{
         void onPlayChanged(bool & _r);
         void onPauseChanged(bool & _r);
         void onStopChanged(bool & _r);
+        void onBmdModeChanged(ofAbstractParameter & param);
 
-
+    
+    map<string, _BMDDisplayMode> bmdModes;
+    _BMDDisplayMode selectedMode;
     
     ofxPanel gui;
     
     ofParameterGroup videoControlGroup;
-    ofParameterGroup recordingControlGroup;
+    ofParameterGroup cameraSettingsGroup;
+    ofParameterGroup cameraModes;
     
-    ofParameter<bool> vidOn;
+    ofParameter<bool> camOn;
     ofParameter<bool> playing;
     ofParameter<bool> pause;
     ofParameter<bool> stop;
+    ofParameter<bool> blackMagic;
+    ofParameter<bool> fullscreen;
+    
+    ofParameter<float> contrast;
+    ofParameter<float> brightness;
+    ofParameter<float> x;
     
     ofParameter<bool> autoToggleVideo;
     ofParameter<bool> recording;

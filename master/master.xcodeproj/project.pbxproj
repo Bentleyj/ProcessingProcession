@@ -7,29 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FC43B3D38A4D41A1AD95D39 /* ofxBlackMagic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8A6395E8DBEC171CB3827BF /* ofxBlackMagic.cpp */; };
 		11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */; };
-		14F2FAEA1DDF287E00EF9B26 /* ControlApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14F2FAE91DDF287E00EF9B26 /* ControlApp.mm */; };
+		144443A21DE307C700CD0EBA /* ofApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 144443A11DE307C700CD0EBA /* ofApp.mm */; };
 		1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 907C5B5E104864A2D3A25745 /* ofxToggle.cpp */; };
 		1F558B76FB3412843DDAA031 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */; };
+		37B20AF287FE4D5F02E07B31 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB50C28D52BEA9C0154C299E /* Utils.cpp */; };
 		483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78D67A00EB899FAC09430597 /* ofxLabel.cpp */; };
+		4C385E6578A086BC4AD303C6 /* DeckLinkAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D7527D0D6B4FE2A5A347B29 /* DeckLinkAPIDispatch.cpp */; };
 		4D508D34156E7076531D9084 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D58DCB2C0AEFDE6171E29540 /* Syphon.framework */; };
 		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
+		667E3B178FEB591D02605243 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48924147984498C5498E28C /* Frame.cpp */; };
+		67455A1D0F1DA6FD0B0D9D3C /* ControlApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBF891AC99618FFEC5776937 /* ControlApp.mm */; };
 		837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F2C6477A769C03A56D1401 /* ofxSlider.cpp */; };
 		856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9604B925D32EE39065747725 /* ofxBaseGui.cpp */; };
 		8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32D6F27DC6308427F9A278C1 /* ofxSyphonServer.mm */; };
+		A6727903AAB1E596D3BB59B9 /* Iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20D6BF09656133F836FD2016 /* Iterator.cpp */; };
+		A6BDD9F0645C624CA7FB57D5 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C61985F7A3285BA583DBE79B /* Input.cpp */; };
 		B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */; };
 		B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */; };
-		C3E6B03047001AECDDBFE6D3 /* DeckLinkAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B545014ED9E7BDAF40541A2F /* DeckLinkAPIDispatch.cpp */; };
 		C9109422648B170B07A778CF /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E3405C5AE387BDDC2AD19473 /* SyphonNameboundClient.m */; };
-		DD6B7D26B640FE59CC56C615 /* DeckLinkController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A22BD0CAF62A2716F682577 /* DeckLinkController.cpp */; };
+		D1B7F4E340DBAFD70F345086 /* DeviceList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD82D412CDF81FB650D33695 /* DeviceList.cpp */; };
 		E1A3FD40C8BCD507345F1126 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DCB2C0AEFDE6171E29540 /* Syphon.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
-		E4B69E210A3A1BDC003C02F2 /* ofApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.mm */; };
-		E6ADFAF5B64F107FD970E6E7 /* ColorConversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1EF496137DFABA53C7D2891 /* ColorConversion.cpp */; };
 		F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */; };
-		F5E5526E27B2A4D8E2B33210 /* VideoFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8D3643CA17BDD17F0696016 /* VideoFrame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,61 +64,63 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		014812804A204B78DE92F463 /* DeckLinkController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkController.h; path = ../../../addons/ofxBlackmagic/src/DeckLinkController.h; sourceTree = SOURCE_ROOT; };
 		01FAC3552E00C3620035EA2F /* ofxSyphonClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSyphonClient.h; path = ../../../addons/ofxSyphon/src/ofxSyphonClient.h; sourceTree = SOURCE_ROOT; };
 		03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxSyphonClient.mm; path = ../../../addons/ofxSyphon/src/ofxSyphonClient.mm; sourceTree = SOURCE_ROOT; };
+		08B845D3B5CFA00DD7F6E4C9 /* DeckLinkAPIModes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIModes.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIModes.h; sourceTree = SOURCE_ROOT; };
 		0A1DAC09F322AE313A40706D /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxToggle.h; path = ../../../addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
 		0FB83AC7747296DD35C1C295 /* ofxSyphon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSyphon.h; path = ../../../addons/ofxSyphon/src/ofxSyphon.h; sourceTree = SOURCE_ROOT; };
-		14F2FAE81DDF287E00EF9B26 /* ControlApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlApp.h; sourceTree = "<group>"; };
-		14F2FAE91DDF287E00EF9B26 /* ControlApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ControlApp.mm; sourceTree = "<group>"; };
+		144443A11DE307C700CD0EBA /* ofApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofApp.mm; sourceTree = "<group>"; };
 		15F2C6477A769C03A56D1401 /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSlider.cpp; path = ../../../addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
 		17E65988300FBD9AAA2CD0CA /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
-		1872C170F254B6602E12CDDD /* DeckLinkAPIDiscovery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIDiscovery.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPIDiscovery.h; sourceTree = SOURCE_ROOT; };
 		1C0DA2561397A7DE0246858B /* ofxGuiGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGuiGroup.h; path = ../../../addons/ofxGui/src/ofxGuiGroup.h; sourceTree = SOURCE_ROOT; };
+		1D7527D0D6B4FE2A5A347B29 /* DeckLinkAPIDispatch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DeckLinkAPIDispatch.cpp; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIDispatch.cpp; sourceTree = SOURCE_ROOT; };
+		1EAC97870615AD6AA6F17F9A /* Frame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Frame.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Frame.h; sourceTree = SOURCE_ROOT; };
+		20D6BF09656133F836FD2016 /* Iterator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Iterator.cpp; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Iterator.cpp; sourceTree = SOURCE_ROOT; };
+		243615FC291F736145BB5D6D /* DeckLinkAPIDeckControl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIDeckControl.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIDeckControl.h; sourceTree = SOURCE_ROOT; };
 		2834D88A62CD23F3DE2C47D1 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxButton.h; path = ../../../addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
-		2D9A6E61AA85D9510EE09E12 /* DeckLinkAPIStreaming.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIStreaming.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPIStreaming.h; sourceTree = SOURCE_ROOT; };
 		32D6F27DC6308427F9A278C1 /* ofxSyphonServer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxSyphonServer.mm; path = ../../../addons/ofxSyphon/src/ofxSyphonServer.mm; sourceTree = SOURCE_ROOT; };
 		337B812806A0E7D26A029E5A /* ofxSyphonServerDirectory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSyphonServerDirectory.h; path = ../../../addons/ofxSyphon/src/ofxSyphonServerDirectory.h; sourceTree = SOURCE_ROOT; };
-		3D2C3CDD948D95892CD56701 /* VideoFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VideoFrame.h; path = ../../../addons/ofxBlackmagic/src/VideoFrame.h; sourceTree = SOURCE_ROOT; };
+		38E9D605FC39B38D0507A676 /* ofxBlackMagic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBlackMagic.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic.h; sourceTree = SOURCE_ROOT; };
 		46BBCC26D60B589958BF0D03 /* ofxSyphonServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSyphonServer.h; path = ../../../addons/ofxSyphon/src/ofxSyphonServer.h; sourceTree = SOURCE_ROOT; };
 		52AFA1F08C420992CAAAE648 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
-		57ECB8A844CEA38616B33437 /* DeckLinkAPIConfiguration.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIConfiguration.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPIConfiguration.h; sourceTree = SOURCE_ROOT; };
-		6089DD11958EED658B1D8273 /* ColorConversion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ColorConversion.h; path = ../../../addons/ofxBlackmagic/src/ColorConversion.h; sourceTree = SOURCE_ROOT; };
-		629A6FFB5F6F21967798ABC5 /* DeckLinkAPIDeckControl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIDeckControl.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPIDeckControl.h; sourceTree = SOURCE_ROOT; };
-		6FD36D0AA497C485B6B18831 /* DeckLinkAPIVersion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIVersion.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPIVersion.h; sourceTree = SOURCE_ROOT; };
+		5B92901A6FE83643A9313536 /* DeckLinkAPIVersion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIVersion.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIVersion.h; sourceTree = SOURCE_ROOT; };
+		6CE01BFD289B2820DC2AAE48 /* ControlApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ControlApp.h; path = src/ControlApp.h; sourceTree = SOURCE_ROOT; };
+		704678E2668BAC7D812C0679 /* DeckLinkAPIStreaming.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIStreaming.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIStreaming.h; sourceTree = SOURCE_ROOT; };
 		71FFD50EA75BCC76F0C58D12 /* SyphonNameboundClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SyphonNameboundClient.h; path = ../../../addons/ofxSyphon/libs/Syphon/src/SyphonNameboundClient.h; sourceTree = SOURCE_ROOT; };
-		764A89DCC76052D47351ED80 /* TripleBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TripleBuffer.h; path = ../../../addons/ofxBlackmagic/src/TripleBuffer.h; sourceTree = SOURCE_ROOT; };
+		78047DD3A87898E75FCA8858 /* Input.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Input.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Input.h; sourceTree = SOURCE_ROOT; };
 		78D67A00EB899FAC09430597 /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLabel.cpp; path = ../../../addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
-		7B32F75629C2396B8CECDC05 /* DeckLinkAPITypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPITypes.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPITypes.h; sourceTree = SOURCE_ROOT; };
+		792317399C521CD540613C80 /* Iterator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Iterator.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Iterator.h; sourceTree = SOURCE_ROOT; };
 		802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSliderGroup.cpp; path = ../../../addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
+		80D746AED90991EB45668B90 /* DeckLinkAPI.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPI.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPI.h; sourceTree = SOURCE_ROOT; };
 		87F26B4B24CBD428AD9EEBAA /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBaseGui.h; path = ../../../addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
 		89449E3044D456F7DE7BEA14 /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPanel.h; path = ../../../addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
-		8A22BD0CAF62A2716F682577 /* DeckLinkController.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DeckLinkController.cpp; path = ../../../addons/ofxBlackmagic/src/DeckLinkController.cpp; sourceTree = SOURCE_ROOT; };
 		907C5B5E104864A2D3A25745 /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxToggle.cpp; path = ../../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
 		9604B925D32EE39065747725 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBaseGui.cpp; path = ../../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
-		B1EF496137DFABA53C7D2891 /* ColorConversion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ColorConversion.cpp; path = ../../../addons/ofxBlackmagic/src/ColorConversion.cpp; sourceTree = SOURCE_ROOT; };
-		B545014ED9E7BDAF40541A2F /* DeckLinkAPIDispatch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DeckLinkAPIDispatch.cpp; path = ../../../addons/ofxBlackmagic/libs/DeckLink/src/DeckLinkAPIDispatch.cpp; sourceTree = SOURCE_ROOT; };
-		B6213121FD2C228DDF7904CE /* DeckLinkAPI.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPI.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPI.h; sourceTree = SOURCE_ROOT; };
+		A48924147984498C5498E28C /* Frame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Frame.cpp; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Frame.cpp; sourceTree = SOURCE_ROOT; };
+		AD82D412CDF81FB650D33695 /* DeviceList.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DeviceList.cpp; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/DeviceList.cpp; sourceTree = SOURCE_ROOT; };
 		B87C60311EC1FE841C1ECD89 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLabel.h; path = ../../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
+		C61985F7A3285BA583DBE79B /* Input.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Input.cpp; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Input.cpp; sourceTree = SOURCE_ROOT; };
 		C70D8946940288799E82131E /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSliderGroup.h; path = ../../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
+		C8616B00D5A3CE5EF383A27E /* DeckLinkAPIDiscovery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIDiscovery.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIDiscovery.h; sourceTree = SOURCE_ROOT; };
 		C88333E71C9457E441C33474 /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxButton.cpp; path = ../../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
-		C8D3643CA17BDD17F0696016 /* VideoFrame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VideoFrame.cpp; path = ../../../addons/ofxBlackmagic/src/VideoFrame.cpp; sourceTree = SOURCE_ROOT; };
 		D58DCB2C0AEFDE6171E29540 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = ../../../addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
+		DB50C28D52BEA9C0154C299E /* Utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Utils.cpp; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Utils.cpp; sourceTree = SOURCE_ROOT; };
+		DBF891AC99618FFEC5776937 /* ControlApp.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ControlApp.mm; path = src/ControlApp.mm; sourceTree = SOURCE_ROOT; };
 		E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxPanel.cpp; path = ../../../addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
 		E3405C5AE387BDDC2AD19473 /* SyphonNameboundClient.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = SyphonNameboundClient.m; path = ../../../addons/ofxSyphon/libs/Syphon/src/SyphonNameboundClient.m; sourceTree = SOURCE_ROOT; };
+		E4215982B42AD19A56944553 /* Utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Utils.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/Utils.h; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* masterDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masterDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		E4B69E1E0A3A1BDC003C02F2 /* ofApp.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = ofApp.mm; path = src/ofApp.mm; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxSyphonServerDirectory.mm; path = ../../../addons/ofxSyphon/src/ofxSyphonServerDirectory.mm; sourceTree = SOURCE_ROOT; };
+		EB6EBC162FA67D5C012B9561 /* DeckLinkAPIConfiguration.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIConfiguration.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPIConfiguration.h; sourceTree = SOURCE_ROOT; };
+		EC3A84A00BA51A157AE7F97D /* DeckLinkAPITypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPITypes.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx/DeckLinkAPITypes.h; sourceTree = SOURCE_ROOT; };
 		ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGuiGroup.cpp; path = ../../../addons/ofxGui/src/ofxGuiGroup.cpp; sourceTree = SOURCE_ROOT; };
-		F8A6395E8DBEC171CB3827BF /* ofxBlackMagic.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBlackMagic.cpp; path = ../../../addons/ofxBlackmagic/src/ofxBlackMagic.cpp; sourceTree = SOURCE_ROOT; };
-		FAC5EE15D10859E1D60FA7D4 /* DeckLinkAPIModes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeckLinkAPIModes.h; path = ../../../addons/ofxBlackmagic/libs/DeckLink/include/DeckLinkAPIModes.h; sourceTree = SOURCE_ROOT; };
-		FC6CAB1D21EEEAD0BAD45DF5 /* ofxBlackMagic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBlackMagic.h; path = ../../../addons/ofxBlackmagic/src/ofxBlackMagic.h; sourceTree = SOURCE_ROOT; };
+		F057CE98C3C685AFD9BA002B /* DeviceList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeviceList.h; path = ../../../addons/ofxBlackMagic2/src/ofxBlackMagic/DeviceList.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,13 +144,22 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
-		35272275289EF52A64533325 /* ofxBlackmagic */ = {
+		392C8A5F27578864320820FB /* ofxBlackMagic */ = {
 			isa = PBXGroup;
 			children = (
-				51FE12845FB33EEAA8F72CD6 /* src */,
-				AACF561F88A0CA2497850257 /* libs */,
+				AD82D412CDF81FB650D33695 /* DeviceList.cpp */,
+				F057CE98C3C685AFD9BA002B /* DeviceList.h */,
+				A48924147984498C5498E28C /* Frame.cpp */,
+				1EAC97870615AD6AA6F17F9A /* Frame.h */,
+				C61985F7A3285BA583DBE79B /* Input.cpp */,
+				78047DD3A87898E75FCA8858 /* Input.h */,
+				20D6BF09656133F836FD2016 /* Iterator.cpp */,
+				792317399C521CD540613C80 /* Iterator.h */,
+				8A18D617CA567785765B7ACA /* osx */,
+				DB50C28D52BEA9C0154C299E /* Utils.cpp */,
+				E4215982B42AD19A56944553 /* Utils.h */,
 			);
-			name = ofxBlackmagic;
+			name = ofxBlackMagic;
 			sourceTree = "<group>";
 		};
 		398D2AD7D162CE13BF40CD4F /* lib */ = {
@@ -189,22 +201,6 @@
 			name = src;
 			sourceTree = "<group>";
 		};
-		51FE12845FB33EEAA8F72CD6 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				B1EF496137DFABA53C7D2891 /* ColorConversion.cpp */,
-				6089DD11958EED658B1D8273 /* ColorConversion.h */,
-				8A22BD0CAF62A2716F682577 /* DeckLinkController.cpp */,
-				014812804A204B78DE92F463 /* DeckLinkController.h */,
-				F8A6395E8DBEC171CB3827BF /* ofxBlackMagic.cpp */,
-				FC6CAB1D21EEEAD0BAD45DF5 /* ofxBlackMagic.h */,
-				764A89DCC76052D47351ED80 /* TripleBuffer.h */,
-				C8D3643CA17BDD17F0696016 /* VideoFrame.cpp */,
-				3D2C3CDD948D95892CD56701 /* VideoFrame.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
 		65F3085962B3A8825746C3C2 /* Syphon */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,21 +208,6 @@
 				398D2AD7D162CE13BF40CD4F /* lib */,
 			);
 			name = Syphon;
-			sourceTree = "<group>";
-		};
-		679F83B85253D78FF7FCD07F /* include */ = {
-			isa = PBXGroup;
-			children = (
-				B6213121FD2C228DDF7904CE /* DeckLinkAPI.h */,
-				57ECB8A844CEA38616B33437 /* DeckLinkAPIConfiguration.h */,
-				629A6FFB5F6F21967798ABC5 /* DeckLinkAPIDeckControl.h */,
-				1872C170F254B6602E12CDDD /* DeckLinkAPIDiscovery.h */,
-				FAC5EE15D10859E1D60FA7D4 /* DeckLinkAPIModes.h */,
-				2D9A6E61AA85D9510EE09E12 /* DeckLinkAPIStreaming.h */,
-				7B32F75629C2396B8CECDC05 /* DeckLinkAPITypes.h */,
-				6FD36D0AA497C485B6B18831 /* DeckLinkAPIVersion.h */,
-			);
-			name = include;
 			sourceTree = "<group>";
 		};
 		6948EE371B920CB800B5AC1A /* local_addons */ = {
@@ -245,12 +226,45 @@
 			name = ofxSyphon;
 			sourceTree = "<group>";
 		};
+		820D5649320949AC6CDD28A4 /* ofxBlackMagic2 */ = {
+			isa = PBXGroup;
+			children = (
+				A3956E2671CDC49D7DEDFF44 /* src */,
+			);
+			name = ofxBlackMagic2;
+			sourceTree = "<group>";
+		};
 		821159A073ABA066739FD401 /* osx */ = {
 			isa = PBXGroup;
 			children = (
 				D58DCB2C0AEFDE6171E29540 /* Syphon.framework */,
 			);
 			name = osx;
+			sourceTree = "<group>";
+		};
+		8A18D617CA567785765B7ACA /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				80D746AED90991EB45668B90 /* DeckLinkAPI.h */,
+				EB6EBC162FA67D5C012B9561 /* DeckLinkAPIConfiguration.h */,
+				243615FC291F736145BB5D6D /* DeckLinkAPIDeckControl.h */,
+				C8616B00D5A3CE5EF383A27E /* DeckLinkAPIDiscovery.h */,
+				1D7527D0D6B4FE2A5A347B29 /* DeckLinkAPIDispatch.cpp */,
+				08B845D3B5CFA00DD7F6E4C9 /* DeckLinkAPIModes.h */,
+				704678E2668BAC7D812C0679 /* DeckLinkAPIStreaming.h */,
+				EC3A84A00BA51A157AE7F97D /* DeckLinkAPITypes.h */,
+				5B92901A6FE83643A9313536 /* DeckLinkAPIVersion.h */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		A3956E2671CDC49D7DEDFF44 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				392C8A5F27578864320820FB /* ofxBlackMagic */,
+				38E9D605FC39B38D0507A676 /* ofxBlackMagic.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		A763ED608B35AE3310251DEE /* src */ = {
@@ -277,39 +291,14 @@
 			name = src;
 			sourceTree = "<group>";
 		};
-		AACF561F88A0CA2497850257 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				C7B3D6CE25910CD4B539346E /* DeckLink */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				35272275289EF52A64533325 /* ofxBlackmagic */,
+				820D5649320949AC6CDD28A4 /* ofxBlackMagic2 */,
 				480A780D8D0308AE4A368801 /* ofxGui */,
 				7F3C04577424427D348B1425 /* ofxSyphon */,
 			);
 			name = addons;
-			sourceTree = "<group>";
-		};
-		C7B3D6CE25910CD4B539346E /* DeckLink */ = {
-			isa = PBXGroup;
-			children = (
-				679F83B85253D78FF7FCD07F /* include */,
-				D00D119205E2A3D628A88B73 /* src */,
-			);
-			name = DeckLink;
-			sourceTree = "<group>";
-		};
-		D00D119205E2A3D628A88B73 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				B545014ED9E7BDAF40541A2F /* DeckLinkAPIDispatch.cpp */,
-			);
-			name = src;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -336,11 +325,11 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				14F2FAE81DDF287E00EF9B26 /* ControlApp.h */,
-				14F2FAE91DDF287E00EF9B26 /* ControlApp.mm */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				E4B69E1E0A3A1BDC003C02F2 /* ofApp.mm */,
+				144443A11DE307C700CD0EBA /* ofApp.mm */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				6CE01BFD289B2820DC2AAE48 /* ControlApp.h */,
+				DBF891AC99618FFEC5776937 /* ControlApp.mm */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -442,12 +431,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				E4B69E210A3A1BDC003C02F2 /* ofApp.mm in Sources */,
-				E6ADFAF5B64F107FD970E6E7 /* ColorConversion.cpp in Sources */,
-				DD6B7D26B640FE59CC56C615 /* DeckLinkController.cpp in Sources */,
-				0FC43B3D38A4D41A1AD95D39 /* ofxBlackMagic.cpp in Sources */,
-				F5E5526E27B2A4D8E2B33210 /* VideoFrame.cpp in Sources */,
-				C3E6B03047001AECDDBFE6D3 /* DeckLinkAPIDispatch.cpp in Sources */,
+				67455A1D0F1DA6FD0B0D9D3C /* ControlApp.mm in Sources */,
+				D1B7F4E340DBAFD70F345086 /* DeviceList.cpp in Sources */,
+				667E3B178FEB591D02605243 /* Frame.cpp in Sources */,
+				144443A21DE307C700CD0EBA /* ofApp.mm in Sources */,
+				A6BDD9F0645C624CA7FB57D5 /* Input.cpp in Sources */,
+				A6727903AAB1E596D3BB59B9 /* Iterator.cpp in Sources */,
+				4C385E6578A086BC4AD303C6 /* DeckLinkAPIDispatch.cpp in Sources */,
+				37B20AF287FE4D5F02E07B31 /* Utils.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
@@ -456,7 +447,6 @@
 				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
 				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
 				1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */,
-				14F2FAEA1DDF287E00EF9B26 /* ControlApp.mm in Sources */,
 				1F558B76FB3412843DDAA031 /* ofxSyphonClient.mm in Sources */,
 				8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */,
 				11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */,
@@ -496,11 +486,11 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxBlackmagic/libs,
-					../../../addons/ofxBlackmagic/libs/DeckLink,
-					../../../addons/ofxBlackmagic/libs/DeckLink/include,
-					../../../addons/ofxBlackmagic/libs/DeckLink/src,
-					../../../addons/ofxBlackmagic/src,
+					src,
+					../../../addons/ofxBlackMagic2/src,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/vs,
 					../../../addons/ofxGui/src,
 					../../../addons/ofxSyphon/libs,
 					../../../addons/ofxSyphon/libs/Syphon,
@@ -541,11 +531,11 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxBlackmagic/libs,
-					../../../addons/ofxBlackmagic/libs/DeckLink,
-					../../../addons/ofxBlackmagic/libs/DeckLink/include,
-					../../../addons/ofxBlackmagic/libs/DeckLink/src,
-					../../../addons/ofxBlackmagic/src,
+					src,
+					../../../addons/ofxBlackMagic2/src,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/vs,
 					../../../addons/ofxGui/src,
 					../../../addons/ofxSyphon/libs,
 					../../../addons/ofxSyphon/libs/Syphon,
@@ -580,11 +570,11 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxBlackmagic/libs,
-					../../../addons/ofxBlackmagic/libs/DeckLink,
-					../../../addons/ofxBlackmagic/libs/DeckLink/include,
-					../../../addons/ofxBlackmagic/libs/DeckLink/src,
-					../../../addons/ofxBlackmagic/src,
+					src,
+					../../../addons/ofxBlackMagic2/src,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/vs,
 					../../../addons/ofxGui/src,
 					../../../addons/ofxSyphon/libs,
 					../../../addons/ofxSyphon/libs/Syphon,
@@ -619,11 +609,11 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxBlackmagic/libs,
-					../../../addons/ofxBlackmagic/libs/DeckLink,
-					../../../addons/ofxBlackmagic/libs/DeckLink/include,
-					../../../addons/ofxBlackmagic/libs/DeckLink/src,
-					../../../addons/ofxBlackmagic/src,
+					src,
+					../../../addons/ofxBlackMagic2/src,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/osx,
+					../../../addons/ofxBlackMagic2/src/ofxBlackMagic/vs,
 					../../../addons/ofxGui/src,
 					../../../addons/ofxSyphon/libs,
 					../../../addons/ofxSyphon/libs/Syphon,

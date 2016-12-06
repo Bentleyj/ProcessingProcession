@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "ControlApp.h"
 #include "ofxSyphon.h"
+#include "ofxBlackMagic.h"
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -12,8 +14,11 @@ class ofApp : public ofBaseApp{
 		void draw();
 
 		void keyPressed(int key);
+        void windowResized(int w, int h);
     
     vector<float> liveTimes;
+    
+    _BMDDisplayMode currentMode;
     
     int liveIndex;
     float lastNow;
@@ -24,4 +29,8 @@ class ofApp : public ofBaseApp{
     ofxSyphonServer syphon;
     
     shared_ptr<ControlApp> control;
+    
+    shared_ptr<ofxBlackmagic::Input> input;
+        
+    ofShader BWShader;
 };
