@@ -23,11 +23,14 @@ class ControlApp : public ofBaseApp{
     map<string, _BMDDisplayMode> bmdModes;
     _BMDDisplayMode selectedMode;
     
+    ofImage title;
+    
     ofxPanel gui;
     
+    ofParameterGroup cameraSourceGroup;
     ofParameterGroup videoControlGroup;
     ofParameterGroup cameraSettingsGroup;
-    ofParameterGroup cameraModes;
+    ofParameterGroup cameraModesGroup;
     
     ofParameter<bool> camOn;
     ofParameter<bool> playing;

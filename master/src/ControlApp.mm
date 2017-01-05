@@ -4,24 +4,29 @@
 void ControlApp::setup(){
     camOn = true;
     
-    ofSetDataPathRoot("../Resources/data");
+    //ofSetDataPathRoot("../Resources/data");
     
     gui.setup("Controls", "settings/controls.xml");
+    
+    cameraSourceGroup.setName("Camera Source");
+    cameraSourceGroup.add(camOn.set("Camera On (c)", false));
+    cameraSourceGroup.add(blackMagic.set("Black Magic On (b)", true));
+    cameraSourceGroup.add(autoToggleVideo.set("Auto Camera (a)", true));
+
+    
     videoControlGroup.setName("Video Controls");
-    videoControlGroup.add(playing.set("Play", true));
-    videoControlGroup.add(pause.set("Pause", false));
-    videoControlGroup.add(stop.set("Stop", false));
-    gui.add(camOn.set("Camera On", false));
-    gui.add(recording.set("Recording", false));
-    gui.add(autoToggleVideo.set("Auto Camera Activation", true));
-    gui.add(blackMagic.set("Black Magic On", true));
-    gui.add(fullscreen.set("Toggle Fullscreen", false));
+    videoControlGroup.add(playing.set("Play (p)", true));
+    videoControlGroup.add(pause.set("Pause (p)", false));
+    videoControlGroup.add(stop.set("Stop (s)", false));
+    videoControlGroup.add(recording.set("Record (r)", false));
+    videoControlGroup.add(fullscreen.set("Fullscreen (f)", false));
     
     cameraSettingsGroup.setName("Camera Settings");
     cameraSettingsGroup.add(contrast.set("Contrast", 1, 0, 2));
     cameraSettingsGroup.add(brightness.set("Brightness", 0, 0, 1));
-    cameraSettingsGroup.add(x.set("Camera Offset", 0, 0, 1));
-
+    cameraSettingsGroup.add(x.set("Offset", 0, 0, 1));
+    
+    gui.add(cameraSourceGroup);
     gui.add(videoControlGroup);
     gui.add(cameraSettingsGroup);
     
@@ -59,20 +64,20 @@ void ControlApp::setup(){
     bmdModes["bmdMode4K2160p60"] = bmdMode4K2160p60;
     bmdModes["bmdModeUnknown"] = bmdModeUnknown;
     
-    cameraModes.setName("BMD Camera Modes");
+    cameraModesGroup.setName("BMD Camera Modes");
     for(auto mode = bmdModes.begin(); mode != bmdModes.end(); mode++) {
         ofParameter<bool> modeToggle;
-        cameraModes.add(modeToggle.set(mode->first, false));
+        cameraModesGroup.add(modeToggle.set(mode->first, false));
     }
     
     selectedMode = bmdModes["bmdModeHD1080p2997"];
     cout<<"Set Selected Mode in Control App to: " << selectedMode << endl;
-    gui.add(cameraModes);
+    gui.add(cameraModesGroup);
     
     gui.loadFromFile("settings/controls.xml");
     
     for(auto mode = bmdModes.begin(); mode != bmdModes.end(); mode++) {
-        ofParameter<bool> selectedParam = cameraModes.getBool(mode->first);
+        ofParameter<bool> selectedParam = cameraModesGroup.getBool(mode->first);
         if(selectedParam) {
             selectedMode = mode->second;
             break;
@@ -84,7 +89,15 @@ void ControlApp::setup(){
         blackMagic = false;
     }
     
-    ofAddListener(cameraModes.parameterChangedE(), this, &ControlApp::onBmdModeChanged);
+    ofAddListener(cameraModesGroup.parameterChangedE(), this, &ControlApp::onBmdModeChanged);
+    
+    title.load("images/ProcessingTitle.jpg");
+    
+    gui.setPosition(10, 10 * 2 + title.getHeight());
+    
+    gui.getGroup("BMD Camera Modes").minimize();
+    
+    ofBackground(0);
     
 }
 
@@ -95,45 +108,34 @@ void ControlApp::update(){
 
 //--------------------------------------------------------------
 void ControlApp::draw(){
+    
+    title.draw(10, 10);
+    
     gui.draw();
     
     float x, y;
     x = gui.getPosition().x + gui.getWidth() + 10;
-    y = gui.getPosition().y + 10;
+    y = gui.getPosition().y + 20;
     
-    ofSetColor(0);
+    ofSetColor(255);
     
-    ofDrawBitmapString("Controls:", x, y);
+    ofDrawBitmapString("Notes:", x, y);
     y += 15;
-    ofDrawBitmapString("'r' Toggles recording if Syphon Recorder is open", x, y);
+    ofDrawBitmapString("Camera on/off only recommended if auto camera is off", x, y);
     y += 15;
-    ofDrawBitmapString("http://syphon.v002.info/recorder/", x, y);
+    ofDrawBitmapString("Recording only works with Syphon Recorder open", x, y);
     y += 15;
-    ofDrawBitmapString("'p' Toggles play/pause", x, y);
-    y += 15;
-    ofDrawBitmapString("'s' Stops video", x, y);
-    y += 15;
-    ofDrawBitmapString("'c' Toggles camera", x, y);
-    y += 15;
-    ofDrawBitmapString("Note: Toggling camera is only recommended if", x, y);
-    y += 15;
-    ofDrawBitmapString("Auto Camera Activation is toggled off", x, y);
-    y += 15;
-    
+    ofDrawBitmapString("Download here: http://syphon.v002.info/recorder/", x, y);
+
     x = gui.getPosition().x + 10;
     y = gui.getPosition().y + 10 + gui.getHeight() + 15;
-    ofDrawBitmapString("Processing Procession\n Artist Filmographer: Bafic\n Software Development: Hellicar Studio", x, y);
+    ofDrawBitmapString("Processing Procession\n Version 1.0\n2017\nBafic\n-\nwww.processingprocession.com\nwww.bafic.systems\nwww.bafic.co.uk\n-\nSoftware Build: Hellicar Studio\nwww.hellicarstudio.com", x, y);
     
 }
 
 //--------------------------------------------------------------
 void ControlApp::keyPressed(int key){
-    if(key == 'p') {
-        playing = !playing;
-    }
-    if(key == 's') {
-        stop = !stop;
-    }
+
 }
 
 //--------------------------------------------------------------
@@ -142,7 +144,19 @@ void ControlApp::keyReleased(int key){
         recording = !recording;
     } else if(key == 'c') {
         camOn = !camOn;
-    }
+    }  else if(key == 'b') {
+        blackMagic = !blackMagic;
+    } else if(key == 'a') {
+        autoToggleVideo = !autoToggleVideo;
+    }  else if(key == 'c') {
+        camOn = !camOn;
+    }  else if(key == 'p') {
+        playing = !playing;
+    } else if(key == 's') {
+        stop = !stop;
+    } else if(key == 'f') {
+        fullscreen = !fullscreen;
+    } 
 }
 
 //--------------------------------------------------------------
@@ -172,9 +186,9 @@ void ControlApp::onBmdModeChanged(ofAbstractParameter & param) {
     for(auto it = bmdModes.begin(); it != bmdModes.end(); it++) {
         string name = it->first;
         if(name == clickedName) {
-            cameraModes.getBool(name).setWithoutEventNotifications(true);
+            cameraModesGroup.getBool(name).setWithoutEventNotifications(true);
         } else {
-            cameraModes.getBool(name).setWithoutEventNotifications(false);
+            cameraModesGroup.getBool(name).setWithoutEventNotifications(false);
         }
     }
     

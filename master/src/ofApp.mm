@@ -6,11 +6,9 @@
 void ofApp::setup(){
     ofSetWindowPosition(ofGetScreenWidth(), 0);
     grabber.initGrabber(ofGetWidth(), ofGetHeight());
-    ofSetDataPathRoot("../Resources/data/");
+    //ofSetDataPathRoot("../Resources/data/");
     player.load("videos/Processing_Procession.mov");
     player.play();
-    
-    //ofToggleFullscreen();
     
     BWShader.load("shaders/BWShader");
     
@@ -29,7 +27,12 @@ void ofApp::setup(){
     liveTimes.push_back(129.23);
     liveTimes.push_back(153.00);
     
-        
+    
+    ofHideCursor();
+    
+    ofBackground(0);
+    
+#ifdef SHOW_MODE
     auto deviceList = ofxBlackmagic::Iterator::getDeviceList();
     if(deviceList.size() > 0) {
         input = shared_ptr<ofxBlackmagic::Input>(new ofxBlackmagic::Input());
@@ -37,15 +40,16 @@ void ofApp::setup(){
         input->startCapture(deviceList[0], control->selectedMode);
         currentMode = control->selectedMode;
     }
-        
-    ofHideCursor();
-        
-    ofBackground(0);
+#else
+    //ofToggleFullscreen();
+#endif
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     player.update();
+#ifdef SHOW_MODE
     if(control->camOn) {
         if(control->blackMagic && input != nullptr) {
             input->update();
@@ -53,7 +57,7 @@ void ofApp::update(){
             grabber.update();
         }
     }
-    
+
     if(control->autoToggleVideo) {
         float now = player.getPosition() * player.getDuration();
         if(liveIndex < liveTimes.size()) {
@@ -97,6 +101,24 @@ void ofApp::update(){
         input->startCapture(deviceList[0], control->selectedMode);
         currentMode = control->selectedMode;
     }
+#else
+    if(camOn) {
+        grabber.update();
+    }
+    float now = player.getPosition() * player.getDuration();
+    if(liveIndex < liveTimes.size()) {
+        if(now > liveTimes[liveIndex]) {
+            camOn = !camOn;
+            liveIndex++;
+        }
+    } else {
+        if(now < lastNow) {
+            liveIndex = 0;
+            camOn = false;
+        }
+    }
+    lastNow = now;
+#endif
 }
 
 //--------------------------------------------------------------
@@ -123,6 +145,7 @@ void ofApp::draw(){
     }
     
     player.draw(x, y, width, height);
+#ifdef SHOW_MODE
     if(control->camOn) {
         BWShader.begin();
         float o_x = ofMap(control->x, 0, 1, 0, width - width * CAMERA_RATIO);
@@ -148,6 +171,20 @@ void ofApp::draw(){
     //input->draw(0, 0);
     
     syphon.publishScreen();
+#else
+    if(camOn) {
+        BWShader.begin();
+        float o_x = ofMap(0.5, 0, 1, 0, width - width * CAMERA_RATIO);
+        BWShader.setUniform1f("u_Offset", o_x);
+        BWShader.setUniform1f("u_Brightness", 0.0);
+        BWShader.setUniform1f("u_Contrast", 1.0);
+            //ofScale(1, ratio);
+        BWShader.setUniform2f("u_Resolution", grabber.getWidth(), grabber.getHeight());
+        BWShader.setUniformTexture("u_Tex", grabber, 0);
+        grabber.getTexture().drawSubsection(x, y, width * CAMERA_RATIO, height , 0, 0);
+        BWShader.end();
+    }
+#endif
 }
 
 //--------------------------------------------------------------

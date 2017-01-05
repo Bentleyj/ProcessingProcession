@@ -6,6 +6,8 @@
 #include "ofxBlackMagic.h"
 #include "ofxGui.h"
 
+//#define SHOW_MODE
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -18,19 +20,22 @@ class ofApp : public ofBaseApp{
     
     vector<float> liveTimes;
     
-    _BMDDisplayMode currentMode;
-    
     int liveIndex;
     float lastNow;
         
     ofVideoPlayer player;
     ofVideoGrabber grabber;
-        
+    ofShader BWShader;
+    
+#ifdef SHOW_MODE
     ofxSyphonServer syphon;
+    
+    _BMDDisplayMode currentMode;
     
     shared_ptr<ControlApp> control;
     
     shared_ptr<ofxBlackmagic::Input> input;
-        
-    ofShader BWShader;
+#else
+    bool camOn;
+#endif
 };
