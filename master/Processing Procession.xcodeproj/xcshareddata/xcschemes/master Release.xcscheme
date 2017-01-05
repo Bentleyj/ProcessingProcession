@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "master.app"
-               BlueprintName = "master"
-               ReferencedContainer = "container:master.xcodeproj">
+               BuildableName = "Processing Procession.app"
+               BlueprintName = "Processing Procession"
+               ReferencedContainer = "container:Processing Procession.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "master.app"
-            BlueprintName = "master"
-            ReferencedContainer = "container:master.xcodeproj">
+            BuildableName = "Processing Procession.app"
+            BlueprintName = "Processing Procession"
+            ReferencedContainer = "container:Processing Procession.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "master.app"
-            BlueprintName = "master"
-            ReferencedContainer = "container:master.xcodeproj">
+            BuildableName = "Processing Procession.app"
+            BlueprintName = "Processing Procession"
+            ReferencedContainer = "container:Processing Procession.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "master.app"
-            BlueprintName = "master"
-            ReferencedContainer = "container:master.xcodeproj">
+            BuildableName = "Processing Procession.app"
+            BlueprintName = "Processing Procession"
+            ReferencedContainer = "container:Processing Procession.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
