@@ -5,8 +5,9 @@
 #include "ofxSyphon.h"
 #include "ofxBlackMagic.h"
 #include "ofxGui.h"
+//#include <Cocoa/Cocoa.h>
 
-//#define SHOW_MODE
+#define SHOW_MODE
 
 class ofApp : public ofBaseApp{
 

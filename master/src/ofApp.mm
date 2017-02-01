@@ -1,11 +1,13 @@
 #include "ofApp.h"
+#import <Cocoa/Cocoa.h>
 #define CAMERA_RATIO 0.5729 // 1100 / 1920 Measured from the video
 // Video frame rate is 29.97 FPS
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+#ifdef SHOW_MODE
     ofSetWindowPosition(ofGetScreenWidth(), 0);
-    grabber.initGrabber(ofGetWidth(), ofGetHeight());
+#endif
     //ofSetDataPathRoot("../Resources/data/");
     player.load("videos/Processing_Procession.mov");
     player.play();
@@ -27,6 +29,14 @@ void ofApp::setup(){
     liveTimes.push_back(129.23);
     liveTimes.push_back(153.00);
     
+    //CGCaptureAllDisplays();
+    NSWindow * appWindow = (NSWindow *)ofGetCocoaWindow();
+    if(appWindow) {
+        NSMenu* bar = [[NSApplication sharedApplication] mainMenu];
+        NSMenuItem* InfoItem = [bar itemAtIndex:0];
+        //[bar removeAllItems];
+        
+    }
     
     ofHideCursor();
     
@@ -41,8 +51,25 @@ void ofApp::setup(){
         currentMode = control->selectedMode;
     }
 #else
-    //ofToggleFullscreen();
+    ofToggleFullscreen();
+    camOn = false;
 #endif
+    float width;
+    float height;
+    float videoRatio = player.getHeight() / player.getWidth(); // Ratio of Width to height of the Video (fixed)
+    float screenRatio = (float)ofGetHeight() / ofGetWidth(); // Ratio of Width to Height of the Screen currently
+    if(screenRatio > videoRatio) { //  Fix x and width
+        width = ofGetWidth();
+        height = width * videoRatio;
+    } else { //  fix y and height
+        //y = 0;
+        height = ofGetHeight();
+        width = height / videoRatio;
+        
+       // x = (ofGetWidth() - width) / 2.0f;
+    }
+    grabber.initGrabber(1280, 720);
+
 
 }
 
@@ -119,6 +146,7 @@ void ofApp::update(){
     }
     lastNow = now;
 #endif
+    cout<<ofGetWindowHeight()<<endl;
 }
 
 //--------------------------------------------------------------
@@ -148,20 +176,22 @@ void ofApp::draw(){
 #ifdef SHOW_MODE
     if(control->camOn) {
         BWShader.begin();
-        float o_x = ofMap(control->x, 0, 1, 0, width - width * CAMERA_RATIO);
-        BWShader.setUniform1f("u_Offset", o_x);
         BWShader.setUniform1f("u_Brightness", control->brightness);
         BWShader.setUniform1f("u_Contrast", control->contrast);
         if(control->blackMagic && input != nullptr) {
             //ofScale(1, ratio);
-            BWShader.setUniform2f("u_Resolution", input->getWidth(), input->getHeight());
-            BWShader.setUniformTexture("u_Tex", *input, 0);
+            float o_x = ofMap(control->x, 0, 1, 0, input->getWidth() - width * CAMERA_RATIO);
+            BWShader.setUniform2f("u_Offset", x + o_x, y);
+            BWShader.setUniform2f("u_CamResolution", input->getWidth(), input->getHeight());
+            BWShader.setUniform2f("u_WindowResolution", width * CAMERA_RATIO, height);            BWShader.setUniformTexture("u_Tex", *input, 0);
             ofDrawRectangle(x, y, width * CAMERA_RATIO, height);
             //input->getTexture().drawSubsection(0, 0, ofGetWidth() * CAMERA_RATIO, input->getHeight(), 0, 0);
         } else {
             //ofScale(1, ratio);
-            BWShader.setUniform2f("u_Resolution", grabber.getWidth(), grabber.getHeight());
-            BWShader.setUniformTexture("u_Tex", grabber, 0);
+            float o_x = ofMap(control->x, 0, 1, 0, grabber.getWidth() - width * CAMERA_RATIO);
+            BWShader.setUniform2f("u_Offset", x + o_x, y);
+            BWShader.setUniform2f("u_CamResolution", grabber.getWidth(), grabber.getHeight());
+            BWShader.setUniform2f("u_WindowResolution", width * CAMERA_RATIO, height);            BWShader.setUniformTexture("u_Tex", grabber, 0);
             grabber.getTexture().drawSubsection(x, y, width * CAMERA_RATIO, height , 0, 0);
         }
         BWShader.end();
@@ -175,15 +205,21 @@ void ofApp::draw(){
     if(camOn) {
         BWShader.begin();
         float o_x = ofMap(0.5, 0, 1, 0, width - width * CAMERA_RATIO);
-        BWShader.setUniform1f("u_Offset", o_x);
+        BWShader.setUniform2f("u_Offset", x + o_x, y);
         BWShader.setUniform1f("u_Brightness", 0.0);
         BWShader.setUniform1f("u_Contrast", 1.0);
             //ofScale(1, ratio);
-        BWShader.setUniform2f("u_Resolution", grabber.getWidth(), grabber.getHeight());
-        BWShader.setUniformTexture("u_Tex", grabber, 0);
-        grabber.getTexture().drawSubsection(x, y, width * CAMERA_RATIO, height , 0, 0);
+        BWShader.setUniform2f("u_CamResolution", grabber.getWidth(), grabber.getHeight());
+        BWShader.setUniform2f("u_WindowResolution", width * CAMERA_RATIO, height);
+        BWShader.setUniformTexture("u_Tex", grabber.getTexture(), 0);
+        ofPushMatrix();
+        ofDrawRectangle(x, y, width * CAMERA_RATIO, height);
         BWShader.end();
+        
+        //grabber.draw(0, 0);
+        //grabber.draw(0, 0);
     }
+
 #endif
 }
 
