@@ -24,7 +24,7 @@ void ControlApp::setup(){
     cameraSettingsGroup.setName("Camera Settings");
     cameraSettingsGroup.add(contrast.set("Contrast", 1, 0, 2));
     cameraSettingsGroup.add(brightness.set("Brightness", 0, 0, 1));
-    cameraSettingsGroup.add(x.set("Offset", 0, 0, 0.5729)); // THIS IS THE CAMRE_RATIO DEFINED IN ofApp.cpp
+    //cameraSettingsGroup.add(x.set("Offset", 0, 0, 0.5729)); // THIS IS THE CAMRE_RATIO DEFINED IN ofApp.cpp
     
     gui.add(cameraSourceGroup);
     gui.add(videoControlGroup);
