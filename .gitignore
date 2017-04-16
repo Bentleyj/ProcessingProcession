@@ -81,3 +81,57 @@ Desktop.ini
 
 # Android
 .csettings
+
+################
+# Unity Files! #
+################
+
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+Builds/
+
+# ========= #
+# Big Files #
+# ========= #
+# Put Big Files Here #
+StreamingAssets/
+*.zip
+
+#also ignore the StreamingAssets folder!
+Streaming\ Assets/
+
+# Builds Folder and any rogue build files
+Builds/
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.unitypackage
+/*.booproj
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
