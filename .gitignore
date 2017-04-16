@@ -97,6 +97,8 @@ sysinfo.txt
 *.stackdump
 Builds/
 
+# Quick Test
+
 # ========= #
 # Big Files #
 # ========= #
