@@ -1,0 +1,53 @@
+<!-- <input type="file" accept="video/*"/> -->
+<head>
+	<style>
+	#webcam {
+		position: absolute;
+		top: 10px;
+	    width: 500px;
+	    height: 375px;
+	    background-color: #666;
+	}
+	</style>
+	<style>
+	#video {
+		position:absolute;
+		z-index: -1;
+/*	    width: 500px;
+	    height: 375px;*/
+/*	    background-color: #666;
+*/	}
+	</style>
+</head>
+
+<body>
+
+<video autoplay id="video">
+	<source src="videos/processing.procession.mp4" type="video/mp4">
+</video>
+
+<video autoplay id="webcam">
+	<!-- <source src="videos/processing.procession.mp4" type="video/mp4"> -->
+</video>
+
+<script>
+var video = document.getElementById("webcam");
+console.log(video);
+ 
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {       
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+ 
+function videoError(e) {
+	console.log(e);
+    // do something
+}
+</script>
+
+</body>
