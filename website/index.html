@@ -1,49 +1,44 @@
-<!-- <input type="file" accept="video/*"/> -->
+<!DOCTYPE html>
 <head>
 	<style>
-/*	#webcam {
-		width:100px;
-		height:100px;
+	.video-container {
+    	width: 100vw; 
+    	height: 56.25vw;
+    	background: black;
+    	max-height: 100vh;
+    	max-width: 177.78vh;
+    	margin: auto;
+    	position: absolute;
+    	top:0;bottom:0;
+    	left:0;right:0;
+    	z-index:-1;
+	}
+	#webcam-container {
 		position:absolute;
 		top:0;
 		left:0;
-		background:gray;
-	}*/
-	.video-container {
-    	width: 100vw; 
-    	height: 56.25vw; /* 100/56.25 = 1.778 */
-    	background: black;
-    	max-height: 100vh;
-    	max-width: 177.78vh; /* 16/9 = 1.778 */
-    	margin: auto;
-    	position: absolute;
-    	top:0;bottom:0; /* vertical center */
-    	left:0;right:0; /* horizontal center */
-    	z-index:-1;
+		width: 58%;
+		height:100%;
+		background:black;
+		overflow:hidden;
+		z-index: 0;
+		/*opacity: 0.5;*/
 	}
-/*	#videoDiv {
-
-	}*/
 	#webcam {
 		position:absolute;
 		top:0;
 		left:0;
-		width: 57%;
 		height:100%;
 		background:black;
 		z-index: 1;
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(100%);
 	}
 	#video {
 		width: 100%;
 		height: 100%;
 		z-index:0;
 		position: absolute; 
-/*		top: 50%; 
-		left:50%; 
-		transform: translate(-50%, -50%); 
-		width: 100%;
-		height: 100%;
-		margin:0 auto;*/
 	}
 	</style>
 </head>
@@ -51,18 +46,17 @@
 <body bgcolor="#000000">
 
 <div class="video-container">
-<video autoplay id="video">
-	<source src="videos/processing.procession.mp4" type="video/mp4">
+	<video autoplay id="video">
+		<source src="videos/processing.procession.mp4" type="video/mp4">
 		Please upgrade your browser so that it supports HTML5 videos. Bitches.
-</video>
-<video autoplay id="webcam">
-	<source src="videos/processing.procession.mp4" type="video/mp4">
-</video>
+	</video>
+	<div id="webcam-container">
+		<video autoplay id="webcam">
+			<source src="videos/processing.procession.mp4" type="video/mp4">
+		</video>
+	</div>
 </div>
-<!-- </div> -->
-
-
-
+<button type="button" onclick="toggleVideo()"> Toggle Video! </button>
 
 <script>
 var video = document.getElementById("webcam");
@@ -81,6 +75,18 @@ function handleVideo(stream) {
 function videoError(e) {
 	console.log(e);
     // do something
+}
+
+function toggleVideo() {
+	//console.log("Test");
+	var webcamContainer = document.getElementById("webcam-container");
+	var style = window.getComputedStyle(webcamContainer);
+	if(style.getPropertyValue("opacity") === "1") {
+		webcamContainer.style.opacity = "0";
+	} else {
+		webcamContainer.style.opacity = "1";
+	}
+
 }
 </script>
 
