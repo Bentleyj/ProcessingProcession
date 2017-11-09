@@ -1,34 +1,68 @@
 <!-- <input type="file" accept="video/*"/> -->
 <head>
 	<style>
-	#webcam {
-		position: absolute;
-		top: 10px;
-	    width: 500px;
-	    height: 375px;
-	    background-color: #666;
-	}
-	</style>
-	<style>
-	#video {
+/*	#webcam {
+		width:100px;
+		height:100px;
 		position:absolute;
-		z-index: -1;
-/*	    width: 500px;
-	    height: 375px;*/
-/*	    background-color: #666;
-*/	}
+		top:0;
+		left:0;
+		background:gray;
+	}*/
+	.video-container {
+    	width: 100vw; 
+    	height: 56.25vw; /* 100/56.25 = 1.778 */
+    	background: black;
+    	max-height: 100vh;
+    	max-width: 177.78vh; /* 16/9 = 1.778 */
+    	margin: auto;
+    	position: absolute;
+    	top:0;bottom:0; /* vertical center */
+    	left:0;right:0; /* horizontal center */
+    	z-index:-1;
+	}
+/*	#videoDiv {
+
+	}*/
+	#webcam {
+		position:absolute;
+		top:0;
+		left:0;
+		width: 57%;
+		height:100%;
+		background:black;
+		z-index: 1;
+	}
+	#video {
+		width: 100%;
+		height: 100%;
+		z-index:0;
+		position: absolute; 
+/*		top: 50%; 
+		left:50%; 
+		transform: translate(-50%, -50%); 
+		width: 100%;
+		height: 100%;
+		margin:0 auto;*/
+	}
 	</style>
 </head>
 
-<body>
+<body bgcolor="#000000">
 
+<div class="video-container">
 <video autoplay id="video">
 	<source src="videos/processing.procession.mp4" type="video/mp4">
+		Please upgrade your browser so that it supports HTML5 videos. Bitches.
 </video>
-
 <video autoplay id="webcam">
-	<!-- <source src="videos/processing.procession.mp4" type="video/mp4"> -->
+	<source src="videos/processing.procession.mp4" type="video/mp4">
 </video>
+</div>
+<!-- </div> -->
+
+
+
 
 <script>
 var video = document.getElementById("webcam");
