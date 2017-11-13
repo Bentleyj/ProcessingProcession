@@ -74,11 +74,9 @@ function handleVideo(stream) {
  
 function videoError(e) {
 	console.log(e);
-    // do something
 }
 
 function toggleVideo() {
-	//console.log("Test");
 	var webcamContainer = document.getElementById("webcam-container");
 	var style = window.getComputedStyle(webcamContainer);
 	if(style.getPropertyValue("opacity") === "1") {
@@ -86,8 +84,13 @@ function toggleVideo() {
 	} else {
 		webcamContainer.style.opacity = "1";
 	}
-
 }
+
+document.getElementById('video').addEventListener('loadedmetadata', function() {
+	console.log("Loaded!");
+}, false);
+
+
 </script>
 
 </body>
