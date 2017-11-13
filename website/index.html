@@ -86,9 +86,25 @@ function toggleVideo() {
 	}
 }
 
-document.getElementById('video').addEventListener('loadedmetadata', function() {
+var processionVideo = document.getElementById('video');
+
+processionVideo.addEventListener('loadedmetadata', function() {
 	console.log("Loaded!");
+	requestAnimationFrame(checkTime);
 }, false);
+
+var nextFrame = 10;
+
+function checkTime() {
+	if(processionVideo.currentTime > nextFrame) {
+		toggleVideo();
+		nextFrame += 10;
+		console.log("Called Correctly!");
+	}
+	//console.log("Called, Requesting again!");
+	//console.log("Currently Time: " + processionVideo.currentTime);
+	requestAnimationFrame(checkTime);
+}
 
 
 </script>
