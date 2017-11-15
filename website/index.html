@@ -15,14 +15,14 @@
 	}
 	#webcam-container {
 		position:absolute;
-		top:0;
+		top:0px;
 		left:0;
-		width: 58%;
+		width: 57.4%;
 		height:100%;
 		background:black;
 		overflow:hidden;
 		z-index: 0;
-		/*opacity: 0.5;*/
+		opacity: 0;
 	}
 	#webcam {
 		position:absolute;
@@ -56,11 +56,11 @@
 		</video>
 	</div>
 </div>
-<button type="button" onclick="toggleVideo()"> Toggle Video! </button>
+<!-- <button type="button" onclick="toggleVideo()"> Toggle Video! </button> -->
 
 <script>
 var video = document.getElementById("webcam");
-console.log(video);
+var webcamContainer = document.getElementById("webcam-container");
  
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
  
@@ -77,13 +77,13 @@ function videoError(e) {
 }
 
 function toggleVideo() {
-	var webcamContainer = document.getElementById("webcam-container");
 	var style = window.getComputedStyle(webcamContainer);
 	if(style.getPropertyValue("opacity") === "1") {
 		webcamContainer.style.opacity = "0";
 	} else {
 		webcamContainer.style.opacity = "1";
 	}
+	console.log("Toggled!");
 }
 
 var processionVideo = document.getElementById('video');
@@ -92,17 +92,21 @@ processionVideo.addEventListener('loadedmetadata', function() {
 	console.log("Loaded!");
 	requestAnimationFrame(checkTime);
 }, false);
-
-var nextFrame = 10;
+//				  on 	 Off  	On     Off    on     off    on      off     on      off     on      off     on      off
+var NextFrames = [61.60, 65.97, 79.53, 87.34, 91.83, 97.90, 114.13, 123.13, 124.37, 125.53, 126.77, 129.13, 153.33, 160.13];
+var nextFrameIndex = 0;
 
 function checkTime() {
-	if(processionVideo.currentTime > nextFrame) {
+	if(processionVideo.currentTime > NextFrames[nextFrameIndex]) {
 		toggleVideo();
-		nextFrame += 10;
+		nextFrameIndex++;
 		console.log("Called Correctly!");
 	}
-	//console.log("Called, Requesting again!");
-	//console.log("Currently Time: " + processionVideo.currentTime);
+	// if(processionVideo.currentTime < NextFrames[nextFrameIndex]) {
+	// 	nextFrameIndex = 0;
+	// 	webcamContainer.style.opacity = "0";
+	// }
+
 	requestAnimationFrame(checkTime);
 }
 
