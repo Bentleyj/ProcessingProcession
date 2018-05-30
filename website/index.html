@@ -46,10 +46,13 @@
 <body bgcolor="#000000">
 
 <div class="video-container">
-	<video autoplay loop="true" id="video">
+	<video autoplay muted loop="true" id="video">
 		<source src="videos/processing.procession.mp4" type="video/mp4">
 		Please upgrade your browser so that it supports HTML5 videos. Bitches.
 	</video>
+	<script>
+		document.getElementById("video").play();
+	</script>
 	<div id="webcam-container">
 		<video autoplay id="webcam">
 		</video>
